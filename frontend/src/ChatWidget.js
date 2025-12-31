@@ -6,7 +6,7 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* 채팅 박스 */}
+      {open && (
         <div className="chat-widget">
           <div className="chat-header">
             <div className = "chat-active">
@@ -19,6 +19,7 @@ export default function ChatWidget() {
             <button className="chat-more"><img src="/more.svg" alt="" /></button>
             <button className="chat-close"onClick={() => setOpen(false)}>✕</button>
           </div>
+
           <div className="chat-body">
             <div className="chat-bubble">
                 <p>Welcome to our page 👋</p>
@@ -30,6 +31,7 @@ export default function ChatWidget() {
                 <button className="quick-btn">Engineering</button>
                 <button className="quick-btn">Sales/Lead</button>
             </div>
+
             </div>
                 <div className="chat-bottom">
                     <span className="chat-placeholder">
@@ -42,9 +44,10 @@ export default function ChatWidget() {
                             <button className="chat-microphone"><img src="/microphone.svg" alt="" /></button>
                         </div>
                         <button className="chat-send"><img src="/arrow.svg" alt="" /></button>
-                 </div>
+                </div>
             </div>
         </div>
+      )}
         <button className="chatbot-trigger" aria-label="Open chat" 
         onClick={() => setOpen(true)}><img src="/nmnm.png"/></button>
     </>
