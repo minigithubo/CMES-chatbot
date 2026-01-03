@@ -3,6 +3,7 @@ import "./ChatWidget.css";
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const [input, setInput] = useState("");
 
   return (
     <>
@@ -34,9 +35,19 @@ export default function ChatWidget() {
 
             </div>
                 <div className="chat-bottom">
-                    <span className="chat-placeholder">
-                        What would you like to know?
-                    </span>
+                    <input
+                      className="chat-input"
+                      type="text"
+                      placeholder="What would you like to know?"
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          console.log(input);
+                          setInput("");
+    }
+  }}
+/>
                     <div className="chat-bottom-row">
                         <div className= "chat-bottom-icon">
                             <button className="chat-image"><img src="/plus.svg" alt="" /></button>
