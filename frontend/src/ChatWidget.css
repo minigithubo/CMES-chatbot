@@ -143,3 +143,10 @@
     width: 18px;
     height: 18px;
   }
+
+  .chat-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
