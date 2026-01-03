@@ -4,6 +4,7 @@ import "./ChatWidget.css";
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [showCompanyInfo, setShowCompanyInfo] = useState(false);
 
   return (
     <>
@@ -28,10 +29,32 @@ export default function ChatWidget() {
             </div>
 
             <div className="quick-actions">
-                <button className="quick-btn">Company info</button>
+                <button 
+                  className="quick-btn"
+                  onClick={() => setShowCompanyInfo((prev) => !prev)}
+                >
+                  Company info
+                </button>
                 <button className="quick-btn">Engineering</button>
                 <button className="quick-btn">Sales/Lead</button>
             </div>
+
+            {showCompanyInfo && (
+              <div className="company-info-options">
+                <button className="info-option">
+                  What industries do you serve?
+                </button>
+                <button className="info-option">
+                  What brands do you partner with?
+                </button>
+                <button className="info-option">
+                  What does CMES Robotics do?
+                </button>
+                <button className="info-option">
+                  How do your automation solutions help?
+                </button>
+              </div>
+            )}
 
             </div>
                 <div className="chat-bottom">

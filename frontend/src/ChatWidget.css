@@ -150,3 +150,19 @@
     outline: none;
     font-size: 14px;
   }
+
+  .company-info-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.info-option {
+  background: #f2f2f2;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+}
